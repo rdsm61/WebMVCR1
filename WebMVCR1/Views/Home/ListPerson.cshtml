@@ -1,0 +1,14 @@
+﻿@model WebMVCR1.Models.PersonRepository
+
+<div>
+    <h3>List of persons</h3>
+    <p>Total number of persons @ViewBag.Count</p>
+
+    <ul>
+        @foreach (var p in ViewBag.Persons)
+        {
+            <li>@p.ToString()</li>
+        }
+    </ul>
+    <p>@Html.ActionLink("To main", "Index")</p>
+</div>
