@@ -1,5 +1,10 @@
 ﻿@model WebMVCR1.Models.Person
 
+@{
+//    Layout = "~/Views/_BasicLayout.cshtml";
+    ViewBag.Title = "Greetings";
+}
+
 <div>
     <h1>Hello, @Model.ToString()! </h1>
     <p>@Html.ActionLink("To main", "Index")</p>

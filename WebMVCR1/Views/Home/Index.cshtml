@@ -1,11 +1,16 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-    <div>@ViewBag.Greeting! Thanks for coming. @ViewData["Message"]</div>
-    <p>@Html.ActionLink("Input your name", "InputData")</p>
-
-    <br />
-
-    <p>@Html.ActionLink("Look who is here", "OutputData")</p>
+﻿@{
+//    Layout = "~/Views/_BasicLayout.cshtml";
+    ViewBag.Title = "Main";
+    
 }
+
+<div class="test">
+    @ViewBag.Greeting! Thanks for coming.
+    <p>
+        @Html.ActionLink("Input your name", "InputData")
+    </p>
+</div>
+
+<br />
+
+<p>@Html.ActionLink("Look who is here", "OutputData")</p>

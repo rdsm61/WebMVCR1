@@ -1,7 +1,8 @@
 ﻿@model WebMVCR1.Models.Person
 
 @{
-    Layout = null;
+//    Layout = "~/Views/_BasicLayout.cshtml";
+    ViewBag.Title = "Input data";
 }
 
 <!DOCTYPE html>
@@ -15,19 +16,20 @@
 
 <h4>Person</h4>
 <div>
-    <form method="post">
-        <table>
-            <tr>
-                <td><p>Enter first name</p></td>
-                <td><input type="text" name="FirstName" /></td>
-            </tr>
-            <tr>
-                <td><p>Enter last name</p></td>
-                <td><input type="text" name="LastName" /></td>
-            </tr>
-            <tr><td><input type="submit" value="Send" /></td></tr>
-        </table>
-    </form>
+    @using(Html.BeginForm())
+        {
+            <table>
+                <tr>
+                    <td><p>Enter first name</p></td>
+                    <td>@Html.TextBox("FirstName")</td>
+                </tr>
+                <tr>
+                    <td><p>Enter last name</p></td>
+                    <td>@Html.TextBoxFor(n => n.LastName)</td>
+                </tr>
+                <tr><td><input type="submit" value="Send" /></td></tr>
+            </table>
+        }
 </div>
 </body>
 </html>
