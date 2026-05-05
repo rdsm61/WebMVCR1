@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+
+<style>
+    h1 {
+        margin: 0px;
+        padding: 2px 0;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    body {
+        font-family: "Trebuchet MS", Verdana, Helvetica, sans-serif;
+        padding: 20px;
+        border: solid medium green;
+        font-size: 15pt;
+    }
+
+    button[type=submit] {
+        margin-top: 15px;
+        padding: 5px;
+        width: 336px;
+    }
+
+    .testStyle {
+        font-size: 40pt;
+        font-style: italic;
+    }
+</style>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/Content/site.css" />
+</head>
+<body>
+    <h1>ОАО "Добро пожаловать!"</h1>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>
